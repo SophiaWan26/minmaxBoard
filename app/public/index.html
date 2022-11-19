@@ -10,26 +10,15 @@
             href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css"
         />
         <link rel="stylesheet" href="style.css" />
-        <!-- <script src="minimax.js"></script> -->
+       <script src="minimax.js"></script>
         
         <title>Connect Four</title>
     </head>
     <body>
-        <script  src="minimax.js"></script>
+       
      <div class="fullheight">
             <div class="container has-text-centered">
                 <h1 class="title">Connect Four</h1>
-                <h2 id="choose-title">Choose Your Game Mode :</h2> --> 
-               <div id="choose-mode">
-                    <span>Game Mode: </span>
-                    <input type="radio" name="mode" value="pvc" id="mode-2" />
-                    Player Vs AI
-                    
-                </div> -->
-                  <div id="start">
-                    <button type="button" id="start-button" onclick="start()">
-                        Start
-                    </button>
                 </div>  
                 
                 
@@ -180,17 +169,14 @@
         </div>
     </body>
     <script>
-        $("#start-button").click(function () {
+
+       window.onload=function () {
+        helper()
+        start()
+       }
+          function helper(){
             $(".cols").toggleClass("hidden");
-            $("#choose-mode").addClass("hidden");
-            $("#choose-title").addClass("hidden");
-
-            $("#start").addClass("hidden");
-            $("#new-button").toggleClass("hidden");
-        });
-
-        $("#new-button").click(function () {
-            location.reload();
-        });
+            $("#start").addClass("hidden");    
+        }
     </script>
 </html>
