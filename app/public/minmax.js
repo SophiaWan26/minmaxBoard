@@ -341,12 +341,6 @@ function start() {
     window.board = new Board();
 }
 
-window.onload=function(){
-  window.board = new Board();
- alert("Hello")
-}
-
-
 function draw() {
     var win = document.getElementById("win-alert");
     win.style.display = "block";
